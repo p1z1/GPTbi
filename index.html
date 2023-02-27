@@ -1,0 +1,70 @@
+<html>
+  <head>  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-84HGDP99HG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-84HGDP99HG');
+  </script>
+
+    <title>GPTbi</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+	<link rel="icon" type="image/svg+xml" href="http://icons.veryicon.com/128/Avatar/Multiple%20Smileys/Clown%20Impish.png" />
+	
+	<meta name="title" content="GPTbi | Bypass Gpt Detectors">
+    <meta name="description" content="Get passed AI detectors by putting your text in this website.">
+    
+	<br/>
+    <h1>GPTbi</h1>
+	<p  >ChatGpt/Gpt3 detector bypasser. Works with all detectors including GptZero.</p>
+	<br/>
+    <form onsubmit="event.preventDefault();">
+      <label for="input-text">Input Text:</label>
+      <br>
+      <textarea id="input-text" rows="4" cols="50"></textarea>
+	  <br><br>
+	  <label for="input-text">Percentage To Change With Synonyms:</label>
+      <br>
+        <input id="input-syn-percent" type="number" min="0" max="100" value="50"/>
+      <br><br>
+	  <label for="input-text">Synonym Collection:</label>
+      <br>
+	  <select id="input-collection">
+          <option value="2">FinNLP Synonyms</option>
+          <option value="1">Zaibacu Thesaurus</option>
+	  </select>
+      <br><br>
+      <label for="input-text">Percentage of Adjective Emphasis to Change:</label>
+      <br>
+        <input id="input-adj-percent" type="number" min="0" max="100" value="60"/>
+	  <br><br>
+	  <label for="input-text">Ignore Quotes:</label>
+      <br>
+        <input id="input-ignore-quotes" type="checkbox" value="ignore" checked/>
+	  <br><br>
+	  <button type="button"
+				onmouseover="this.style.backgroundColor='gray'; this.style.cursor='pointer';" 
+				onmouseout="this.style.backgroundColor='white'; this.style.cursor='auto';"
+				onclick="updateText();">Submit</button>
+    </form>
+    
+    <h2>Output Text:</h2>
+    <p id="output-text">Your output text will appear here.</p>
+    <br/>
+	<button id="copy" type="button"
+				onmouseover="this.style.backgroundColor='gray'; this.style.cursor='pointer';" 
+				onmouseout="this.style.backgroundColor='white'; this.style.cursor='auto';"
+				onclick="copyContent();">Copy</button>
+	<br/><br/><br/><br/>
+	<hr>
+	<h2>Information</h2>
+	<p id="smaller">Currently GPTbi works by downloading a dictionary of synonyms and replacing a number of words with their counterparts. While this works most of the time, sometimes synonyms can be very odd and the text  would require fixing by humans. This process however does a great job at getting past GPT detectors! This works with every detector tested from GPT Zero to the Grammarly Plagiarism Check. </p>
+	</br>
+    <br/>
+	<a id="smaller" href="https://github.com/p1z1/GPTbi"><img width="30px" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/></a>
+  </body>
+</html>
